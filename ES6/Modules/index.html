@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>React ES6 Modules</h1>
+
+    <h4>Modules</h4>
+    <ul>
+        <li>JavaScript modules allow you to break up your code into separate files.</li>
+        <li>This makes it easier to maintain the code-base.</li>
+        <li>ES Modules rely on the <mark>import</mark> and <mark>export</mark> statement.</li>
+    </ul>
+
+    <h4>Export</h4>
+    <ul>
+        <li>You cna export a function or variable from any file.</li>
+        <li>Let us create a file named <mark>person.js</mark> and fill it with the things we want to export.</li>
+        <li>There are two types of exports: Named and Default.</li>
+    </ul>
+
+    <h4>Named Exports</h4>
+    <ul>
+        <li>You can create named esports two ways.</li>
+        <ul>
+            <li>In-line individually</li>
+            <li>all at once at the bottom</li>
+        </ul>
+    </ul>
+    <h6>person.js</h6>
+    <code>
+        export const name = "Jesse"
+        export const age = 40
+
+        or 
+
+        const name = "Jesse"
+        const age = 40
+
+        export { name, age }
+    </code>
+
+    <h4>Default Exports</h4>
+    <ul>
+        <li>let us create another file, named message.js, and use it for demonstrating default esport.</li>
+        <li>You can only have on default export in a file.</li>
+    </ul>
+    <h6>message.js</h6>
+    <code>
+        const message = () => {
+            const name = "Jesse";
+            const age = 40;
+            return name + ' is ' + age + 'years old.';
+        };
+
+        export default message;
+    </code>
+
+    <h4>Import</h4>
+    <ul>
+        <li>You can import modules into a file in two ways, based on if they are named exports or default exports.</li>
+        <li>Named exports must be destructured using curly braces. Default exports do not.</li>
+    </ul>
+
+
+    <p id="demo1"></p> <!-- My name is Jesse, I am 40. -->
+    <p id="demo2"></p> <!-- Jesse is 40 years old. -->
+
+    <script type="module">
+        import { name, age } from "./person.js";
+
+        document.getElementById("demo1").innerHTML = "My name is " + name;
+        document.getElementById("demo1").innerHTML += ", I am " + age + ".";
+
+        import message from "./message.js";
+
+        document.getElementById("demo2").innerHTML = message();
+
+    </script>
+</body>
+</html>

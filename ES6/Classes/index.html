@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React ES6</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <div class="header">
+        <h1><u>ES6 Classes</u></h1>
+    </div>
+
+    <div class="row">
+        <div class="col-4 def">
+            <ul><b><u>Classes</u>:</b>
+                <li>Es6 introduced classes.</li>
+                <li>a class is a type of function</li>
+                <li>
+                    but instead of using the keyword <mar>function</mar> to initiate it <br>
+                    we use the keyword <mark>class</mark>, <br>
+                    and the properties are assigned inside a <mark>constructor() method.</mark>
+                </li>
+                <li>Use uppercase when naming the class</li>
+                <li>The constructor function is called automatically when the obj is initialized</li>
+            </ul>
+        </div>
+
+        <div class="col-4 syntax">
+            <h1><u>Method in Classes</u></h1>
+            <ul>
+                <li>you can add your own methods in a class</li>
+                <li>
+                    you call the method by referring to the object's method name <br>
+                    followed by parentheses (parameters would go inside the parentheses)
+                </li>
+            </ul>
+        </div>
+
+        <div class="col-4">
+            <div class="aside">
+                <h4>Class Inheritance</h4>
+                <ul>
+                    <li>to create a class inheritance, use the <mark>extends</mark> keyword.</li>
+                    <li>A class created with a class inherits all the methods from another class</li>
+                    <li>the <mark>super()</mark> method refers to the parent class</li>
+                    <li>
+                        by calling the <mark>super()</mark> method in the constructor method<br>
+                        we call the parent's constructor method <br>
+                        amd get access to the parent's properties and methods.
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+        <div class="row" style="padding-top: 10px;">
+            <div class="col-7 footer2">
+                <div>
+                    <h3><u>Example</u></h3>
+                    <h4><b><u>Code</u>:</b></h4>
+                        <p class="examples">
+                            <code>
+                                class Car {                 <br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;constructor(name) {     <br>
+                                        this.brand = name;  <br>
+                                    }                       <br>
+                                    <br>
+                                    present() {                                     <br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return 'I have a ' + this.brand;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+                                }<br>
+                                <br>
+                                class Model extends Car {<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;constructor(name, mod) {<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; super(name);<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  this.model = mod;<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp; }<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;show() {<br>
+                                            <br>
+                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return this.present() + ', it is a ' + this.model <br>
+                                            &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+                                }<br>
+                                <br>
+                                const mycar1 = new Car("Mazda");<br>
+                                const mycar2 = new Model("Ford", "Mustang");<br>
+                                <br>
+                                const carDetailsElement = document.getElementById("example1");<br>
+                        <br>
+                                carDetailsElement.innerHTML = `<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;${mycar1.present()}<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;${mycar2.show()}<br>
+                                `;
+                            </code>
+                        </p>
+                </div>
+            </div>
+
+            <div class="col-5 footer">
+                <ol><b><u>Result:</u></b>
+                    <li><span id="example1"></span></li>
+
+
+                    
+                </ol>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        class Car {
+            constructor(name) {
+                this.brand = name;
+            }
+
+            present() {
+                return 'I have a ' + this.brand;
+            }
+        }
+
+        class Model extends Car {
+            constructor(name, mod) {
+                super(name);
+                this.model = mod;
+            }
+            show() {
+                return this.present() + ', it is a ' + this.model 
+            }
+        }
+
+        const mycar1 = new Car("Mazda");
+        const mycar2 = new Model("Ford", "Mustang");
+
+        const carDetailsElement = document.getElementById("example1");
+
+        carDetailsElement.innerHTML = `
+            ${mycar1.present()}<br>
+            ${mycar2.show()}
+        `;
+    </script>
+</body>
+</html>

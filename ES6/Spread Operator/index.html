@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Spread Operator</h1>
+    <p>The JS spread operator (...) allows us to quickly copy all or part of an existing array or object into another array or object.</p>
+    <p>The spread operator is often used in combination with destructing</p>
+    <p>you can use the spread operator with objects too</p>
+    <p>press F12 to view in the terminal</p>
+    <p>Notice the properties that did not match were combined, but the property that did match, color, was overwitten by the last object that was passed, updateMyVehicle. The resulting color is now yellow.</p>
+
+    <script>
+        const numbersOne = [1, 2, 3];
+        const numbersTwo = [4, 5, 6];
+        const numbersCombined = [...numbersOne, ...numbersTwo];
+
+        document.write(numbersCombined); // 1,2,3,4,5,6
+
+    // Assign the first and second items from numbers to vaiables and put the rest in an array
+        const numbers = [1, 2, 3, 4, 5, 6];
+
+        const [one, two, ...rest] = numbers;
+
+        document.write("<p>" + one + "</p>");       // 1
+        document.write("<p>" + two + "</p>");       // 2
+        document.write("<p>" + rest + "</p>");      // 3,4,5,6
+
+
+        const myVehicle = {
+            brand: 'Ford',
+            model: 'Mustang',
+            color: 'red'
+        }
+
+        const updateMyVehicle = {
+            type: 'car',
+            year: 2021, 
+            color: 'yellow'
+        }
+
+        const myUpdatedVehicle = {...myVehicle, ...updateMyVehicle}
+
+        //Check the result object in the console:
+        console.log(myUpdatedVehicle);
+    </script>
+</body>
+</html>

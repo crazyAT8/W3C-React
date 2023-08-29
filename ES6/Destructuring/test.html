@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>React ES6- Destructing</h1>
+
+    <p id="carExample"></p>
+    <p id="carExample2"></p>
+    <p id="carExample3"></p>
+    
+    <script>
+       function calculate(a, b) {
+            const add = a + b;
+            const subtract = a - b;
+            const multiply = a * b;
+            const divide = a / b;
+
+            return [add, subtract, multiply, divide];
+        }
+
+        const [add, subtract, multiply, divide] = calculate(4, 7);
+
+        document.write("<p>Sum: " + add + "</p>");
+        document.write("<p>Difference " + subtract + "</p>");
+        document.write("<p>Product: " + multiply + "</p>");
+        document.write("<p>Quotient " + divide + "</p>");
+
+        const vehicleOne = {
+            brand: 'Ford',
+            model: 'Mustang',
+            type: 'car',
+            year: 2021, 
+            color: 'red',
+            registration: {
+                city: 'Houston',
+                state: 'Texas',
+                country: 'USA'
+            }
+        }
+
+        myVehicle(vehicleOne);
+        myVehicle2(vehicleOne);
+        myVehicle3(vehicleOne);
+
+    // New Way
+        function myVehicle({type, color, brand, model}) {
+            const message = 'My ' + type + ' is a ' + color + ' ' + brand + ' ' + model + '.';
+
+            document.getElementById("carExample").innerHTML = message;
+        }
+    // Old Way
+        function myVehicle2(vehicle) {
+            const message = 'My ' + vehicle.type + ' is also a ' + vehicle.color + ' ' + vehicle.brand + ' ' + vehicle.model + '.';
+
+            document.getElementById("carExample2").innerHTML = message;
+        }
+    // Destructure deeply nested objs
+        function myVehicle3({ model, registration: { state } }) {
+            const message = 'My ' + model + ' is registered in ' + state + '.';
+
+            document.getElementById("carExample3").innerHTML = message;
+        }
+
+    </script>
+</body>
+</html>
