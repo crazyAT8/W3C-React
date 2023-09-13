@@ -11,10 +11,47 @@
     <h4>Ternary Operator</h4>
     <ul>
         <li>The ternary operator is a simplified conditional operator like if/else.</li>
-        <li>Syntax: condition ? <expression if true> : <expression if false></li>
+        <li>Syntax: condition ? &lt;expression if true&gt; : &lt;expression if false&gt;</li>
     </ul>
 
+    <code>
+        function renderApp() {<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;document.getElementById("demo").innerHTML = "Welcome!";<br>
+        }<br>
+<br>
+        function renderLogin() {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;document.getElementById("demo").innerHTML = "Please log in"; <br>
+        }<br>
+<br>
+        let authenticated = true;  // change for it to switch <br>
+<br>
+        if (authenticated) { <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;renderApp(); <br>
+        } else { <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;renderLogin(); <br>
+        }
+    </code>
+
     <h1 id="demo"></h1>
+
+    <code>
+        function renderApp2() {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;document.getElementById("demo").innerHTML = "Welcome!";<br>
+            }<br>
+    <br>
+            function renderLogin2() {<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;document.getElementById("demo").innerHTML = "Please log in"; <br>
+            }<br>
+    <br>
+            let authenticated2 = true;  // change for it to switch <br>
+    <br>
+            authenticated2 ? renderApp2() : renderLogin2();<br>
+            <br>
+            // this is saying if the condition is true<br>
+            // use the renderApp2() function<br>
+            // if false then renderLogin2()
+    </code>
+
     <h1 id="demo2"></h1>
 
     <script>
@@ -26,7 +63,7 @@
             document.getElementById("demo").innerHTML = "Please log in";
         }
 
-        let authenticated = false;  // change for it to switch
+        let authenticated = true;  // change for it to switch
 
         if (authenticated) {
             renderApp();
@@ -35,17 +72,17 @@
         }
 
 
-        function renderApp() {
-            document.getElementById("demo2").innerHTML = "Welcome!";
+        function renderApp2() {
+            document.getElementById("demo2").innerHTML = "Welcome2!";
         }
 
-        function renderLogin() {
-            document.getElementById("demo2").innerHTML = "Please log in";
+        function renderLogin2() {
+            document.getElementById("demo2").innerHTML = "Please log in2";
         }
 
         let authenticated2 = true;  // change for it to switch
 
-        authenticated ? renderApp() : renderLogin();
+        authenticated2 ? renderApp2() : renderLogin2();
     </script>
 </body>
 </html>

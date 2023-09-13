@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React Render HTML</title>
+</head>
+<body>
+    <h1>React Render HTML</h1>
+    <p>React's goal is to render HTML in a web page</p>
+    <p>React renders HTML to the web page by using a function called <mark>createRoot()</mark> and its method <mark>render()</mark></p>
+
+    <h2>The createRoot Function</h2>
+    <ul>
+        <li>the <mark>createRoot()</mark> takes one argument, an HTML element.</li>
+        <li>the purpose of the function is to define the HTML element where a React component should be displayed.</li>
+    </ul>
+
+    <h2>The render Method</h2>
+    <ul>
+        <li>the <mark>render()</mark> method is then called to define the React component that should be rendered</li>
+        <li>which is a <mark>index.html</mark> file in the "public" folder in your React project</li>
+    </ul>
+
+    <div id="root"></div>
+
+    <h2>The HTML Code</h2>
+    <ul>
+        <li>JSX which allows you to write html tags inside the JavaScript code</li>
+        <li>basically create a const variableName = (html code surrounded by a &lt;div&gt; tag)</li>
+        <li>the html code within the circle brackets is merely a segment or section of the HTML</li>
+        <li>you write out that code and ship it to your index with this code<br>
+            <code>
+                import React from 'react';<br>
+                import ReactDOM from 'react-dom/client';<br>
+                <br>
+                const variableName = (<br>
+                &nbsp;&nbsp;&nbsp;// HTML code <br>
+                )<br><br>
+                const container = document.getElementById('root');<br>
+                const root = ReactDOM.createRoot(container);<br>
+                root.render(variableName)<br>
+            </code>
+        </li>
+    </ul>
+
+    <h2>The Root Node</h2>
+    <p>this is merely a tag within the index.html file with a given id that is called in the container variable</p>
+
+    <script src="code.js"></script>
+</body>
+</html>
