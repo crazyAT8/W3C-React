@@ -23,6 +23,37 @@
         </li>
         <li>JSX converts HTML tags into react elements.</li>
         <li>you are not required to use JSX</li>
+        <li>
+            JSX is an extension of the JavaScript language based on ES6 <br>
+            &nbsp;&nbsp;&nbsp;and is translated into regular JavaScript at runtime.
+        </li>
+    </ul>
+
+    <h3>Expressions in JSX</h3>
+    <ul>
+        <li>With JSX you can write expressions inside curly braces { }</li>
+        <li>
+            The expression can be a React variable <br>
+            &nbsp;&nbsp;&nbsp;or property, or any other valid JavaScript expression. <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;JSX will execute the expression and return the result
+        </li>
+    </ul>
+
+    <h3>Inserting a Large Block of HTML</h3>
+    <ul>
+        <li>To write HTML on multiple lines, put the HTML inside parentheses</li>
+    </ul>
+
+    <h3>One Top Level Element</h3>
+    <ul>
+        <li>The HTML code must be wrapped in ONE top level element.</li>
+        <li>So if you write two paragraphs, you must put them inside a parent element, like a <mark>div</mark> element</li>
+        <li>Will throw an error other wise</li>
+        <li>
+            Alternatively, you can use <b>"fragment"</b> to wrap multiple lines.<br>
+            &nbsp;&nbsp;&nbsp;This will prevent unnecessarily adding extra nodes to the DOM.
+        </li>
+        <li>a <b>fragment</b> looks like an empty HTML tag: &lt;&gt;&lt;/&gt;</li>
     </ul>
 </body>
 </html>
