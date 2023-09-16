@@ -8,52 +8,95 @@
 <body>
     <h1>React JSx</h1>
 
-    <h3>What is JSX?</h3>
-    <ul>
-        <li>stands for JavaScript XML</li>
-        <li>allows you to write HTML in React</li>
-    </ul>
-
-    <h3>Coding JSX</h3>
-    <ul>
-        <li>
-            JSX allows us to write HTML elements in JavaScript <br>
-            &nbsp;&nbsp;&nbsp;and place them in the DOM <br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;without any <mark>createElement()</mark> and/or <mark>appendChild()</mark> methods.
-        </li>
-        <li>JSX converts HTML tags into react elements.</li>
-        <li>you are not required to use JSX</li>
-        <li>
-            JSX is an extension of the JavaScript language based on ES6 <br>
-            &nbsp;&nbsp;&nbsp;and is translated into regular JavaScript at runtime.
-        </li>
-    </ul>
-
-    <h3>Expressions in JSX</h3>
-    <ul>
-        <li>With JSX you can write expressions inside curly braces { }</li>
-        <li>
-            The expression can be a React variable <br>
-            &nbsp;&nbsp;&nbsp;or property, or any other valid JavaScript expression. <br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;JSX will execute the expression and return the result
-        </li>
-    </ul>
-
-    <h3>Inserting a Large Block of HTML</h3>
-    <ul>
-        <li>To write HTML on multiple lines, put the HTML inside parentheses</li>
-    </ul>
-
-    <h3>One Top Level Element</h3>
-    <ul>
-        <li>The HTML code must be wrapped in ONE top level element.</li>
-        <li>So if you write two paragraphs, you must put them inside a parent element, like a <mark>div</mark> element</li>
-        <li>Will throw an error other wise</li>
-        <li>
-            Alternatively, you can use <b>"fragment"</b> to wrap multiple lines.<br>
-            &nbsp;&nbsp;&nbsp;This will prevent unnecessarily adding extra nodes to the DOM.
-        </li>
-        <li>a <b>fragment</b> looks like an empty HTML tag: &lt;&gt;&lt;/&gt;</li>
-    </ul>
+    <div>
+        <h3>What is JSX?</h3>
+        <ul>
+            <li>stands for JavaScript XML</li>
+            <li>allows you to write HTML in React</li>
+        </ul>
+    
+        <h3>Coding JSX</h3>
+        <ul>
+            <li>
+                JSX allows us to write HTML elements in JavaScript <br>
+                &nbsp;&nbsp;&nbsp;and place them in the DOM <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;without any <mark>createElement()</mark> and/or <mark>appendChild()</mark> methods.
+            </li>
+            <li>JSX converts HTML tags into react elements.</li>
+            <li>you are not required to use JSX</li>
+            <li>
+                JSX is an extension of the JavaScript language based on ES6 <br>
+                &nbsp;&nbsp;&nbsp;and is translated into regular JavaScript at runtime.
+            </li>
+        </ul>
+    
+        <h3>Expressions in JSX</h3>
+        <ul>
+            <li>With JSX you can write expressions inside curly braces { }</li>
+            <li>
+                The expression can be a React variable <br>
+                &nbsp;&nbsp;&nbsp;or property, or any other valid JavaScript expression. <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;JSX will execute the expression and return the result
+            </li>
+        </ul>
+    
+        <h3>Inserting a Large Block of HTML</h3>
+        <ul>
+            <li>To write HTML on multiple lines, put the HTML inside parentheses</li>
+        </ul>
+    
+        <h3>One Top Level Element</h3>
+        <ul>
+            <li>The HTML code must be wrapped in ONE top level element.</li>
+            <li>
+                So if you write two paragraphs, <br> 
+                &nbsp;&nbsp;&nbsp;you must put them inside a parent element, like a <mark>div</mark> element
+            </li>
+            <li>Will throw an error other wise</li>
+            <li>
+                Alternatively, you can use <b>"fragment"</b> to wrap multiple lines.<br>
+                &nbsp;&nbsp;&nbsp;This will prevent unnecessarily adding extra nodes to the DOM.
+            </li>
+            <li>a <b>fragment</b> looks like an empty HTML tag: &lt;&gt;&lt;/&gt;</li>
+        </ul>
+    
+        <h3>Elements Must be Closed</h3>
+        <ul>
+            <li>
+                JSX follows XML rules, <br> 
+                &nbsp;&nbsp;&nbsp;and therefore HTML elements must be properly closed.
+            </li>
+        </ul>
+    
+        <h3>Attribute class = className</h3>
+        <ul>
+            <li>
+                The <mark>class</mark> attribute is a much used attribute in HTML,<br>
+                &nbsp;&nbsp;&nbsp;but since JSX is rendered as JavaScript, <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;and the <mark>class</mark> keyword is a reserved word in JavaScript, <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;you are not allowed to use it in JSX
+            </li>
+            <li>Use attribute <mark>className</mark> instead.</li>
+            <li>
+                JSX solved this by using <mark>className</mark> instead. <br>
+                &nbsp;&nbsp;&nbsp;When JSX is rendered, <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;it translates <mark>className</mark> attributes into <mark>class</mark> attributes.
+            </li>
+        </ul>
+    
+        <h3>Conditions - if statements</h3>
+        <ul>
+            <li>React supports <mark>if</mark> statements, but not inside JSX.</li>
+            <li>
+                To be able to use conditional statements in JSX, <br>
+                &nbsp;&nbsp;&nbsp;you should put the <mark>if</mark> statements outside of the JSX, <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;or you could use a trnary expression instead
+            </li>
+            <li>
+                <b><u>Note</u></b>: in order to embed a JavaScript expression inside JSX, <br>
+                &nbsp;&nbsp;&nbsp;the JavaScript must be wrapped with curly braces, {}
+            </li>
+        </ul>
+    </div>
 </body>
 </html>
