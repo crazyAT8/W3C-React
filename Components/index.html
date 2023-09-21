@@ -26,5 +26,93 @@
             <li>There is an optional section on Class components for your reference.</li>
         </li>
     </ul>
+
+    <h3>Creating Your First Component</h3>
+    <ul>
+        <li>Must start with an uppercase letter</li>
+    </ul>
+    <h4>Class Component</h4>
+    <ul>
+        <li>A class component must include the <mark>extends React.Component</mark> statement</li>
+        <li>
+            This statement creates an inheritance to React.Component <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;and gives you component access to React.Component's functions.
+        </li>
+        <li>The component also requires a <mark>render()</mark> method, this method returns HTML.</li>
+        <br>
+        <code>
+            class Car extends React.Component { <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;render() { <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return &lt;h2&gt;Hi, I am a Car!&lt;/h2&gt;;    <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;} <br>
+            } 
+        </code>
+    </ul>
+    <h4>Function Component</h4>
+    <ul>
+        <li>a function component also returns HTML</li>
+        <li>and behaves much the same way as a Class component</li>
+        <li>
+            but Function components can be written using much less code, <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;are easier to understand, 
+        </li>
+        <br>
+        <code>
+            function Car() { <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;return &lt;h2&gt;Hi, I am a Car!&lt;/h2&gt;; <br>
+            }
+        </code>
+    </ul>
+
+    <h3>Rendering a Component</h3>
+    <ul>
+        <li>to use the Car component in our application</li> <br>
+        <code>
+            const root = ReactDom.createRoot(document.getElementById('root')); <br>
+            root.render(&lt;Car /&gt;)
+        </code> 
+        <br>
+        <li style="padding-top: 15px;">your component name is used as an HTML tag</li>
+    </ul>
+
+    <h3>Props</h3>
+    <ul>
+        <li>Components can be passed as <mark>props</mark>, which stand for properties.</li>
+        <li>
+            Props are like function arguments, <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;and you send them into the compnent as attributes.
+        </li>
+        <br>
+        <code>
+            function Car(props) { <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;return &lt;h2&gt;I am a {props.color} Car!&lt;/h2&gt; <br>
+            }<br>
+              <br>
+            const root = ReactDOM.createRoot(document.getElementById('root')); <br>
+            root.render(&lt;Car color="red"/&gt;);  <br>
+            <br>
+            <b><u>Output</u></b>: <h2>I am a red Car!</h2>
+        </code>
+    </ul>
+
+    <h3>Components in Components</h3>
+    <ul>
+        <li>its possible</li>
+        <li>just use the Components Name as a tag in another Component</li>
+    </ul>
+
+    <h3>Components in Files</h3>
+    <ul>
+        <li>its recommended to split your components into seperate files</li>
+        <li>us a <mark>.js</mark> file extension</li>
+        <li>file names must be in UperCase letters</li>
+        <li>
+            to be able to use the component in a seperate file <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;you have to first export default ComponentName from the file <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;then import the file in index.js file
+        </li>
+    </ul>
+
+
 </body>
 </html>
