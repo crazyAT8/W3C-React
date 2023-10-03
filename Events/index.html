@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React Events</title>
+</head>
+<body>
+    <h1>React Events</h1>
+    <ul>
+        <li>Just like HTML DOM events, <br> &nbsp;&nbsp;&nbsp;&nbsp; React can perform actions based on user events.</li>
+        <li>React has the same events as HTML: <br>&nbsp;&nbsp;&nbsp;&nbsp;click, change, mouseover etc.</li>
+    </ul>
+
+    <h3>Adding Events</h3>
+    <ul>
+        <li>
+            React events are written in camelCase syntax:<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<mark>onClick</mark> instead of <mark>onclick</mark>.
+        </li>
+        <li>
+            React event handlers are written inside curly braces:<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<mark>onClick={shoot}</mark> instead of <mark>onclick="shoot()"</mark>
+        </li>
+        <li style="list-style: none;">
+            <u><b>example:</b></u><br>
+            <code style="">
+                function Football() {       <br>
+                    &nbsp;&nbsp;const shoot = () => {   <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;alert("Great Shot!"); <br>
+                    &nbsp;&nbsp;} <br><br>
+                    &nbsp;&nbsp;return (    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;button onClick={shoot}&gt;Take the shot!&lt;/button&gt; <br>
+                    &nbsp;&nbsp;); <br>
+                }
+            </code>
+        </li>
+    </ul>
+
+    <h3>Passing Arguments</h3>
+    <ul>
+        <li>to pass an argument to an event handler, use an arrow function.</li>
+        <li style="list-style: none;">
+            <u><b>example:</b></u><br>
+            <code>
+                function Football() {       <br>
+                    &nbsp;&nbsp;const shoot = (a) => {   <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;alert(a); <br>
+                    &nbsp;&nbsp;} <br><br>
+                    &nbsp;&nbsp;return (    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;button onClick={() => shoot("Goal!"")}&gt;Take the shot!&lt;/button&gt; <br>
+                    &nbsp;&nbsp;); <br>
+                }
+            </code>
+        </li>
+    </ul>
+
+    <h3>React Event Object</h3>
+    <ul>
+        <li>Event handlers have asccess to the React event that triggered the function.</li>
+        <li style="list-style: none;">
+            <u><b>example:</b></u><br>
+            <code>
+                function Football() {       <br>
+                    &nbsp;&nbsp;const shoot = (a, b) => {   <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;alert(b.type); <br>
+                    &nbsp;&nbsp;} <br><br>
+                    &nbsp;&nbsp;return (    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;button onClick={(event) => shoot("Goal!", event)}&gt;Take the shot!&lt;/button&gt; <br>
+                    &nbsp;&nbsp;); <br>
+                }
+            </code>
+            <ul>
+                <li style="list-style: none;"><u><b>Result</b></u>: click</li>
+                <li>
+                    'b' represents the React event that triggered the function, <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;in this case the 'click' event.
+                </li>
+            </ul>
+        </li>
+    </ul>
+</body>
+</html>
