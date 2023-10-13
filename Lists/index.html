@@ -6,6 +6,29 @@
     <title>React Lists</title>
 </head>
 <body>
-    
+    <h1>React Lists</h1>
+
+    <ul>
+        <li>in react, you will render lists with some type of loop</li>
+        <li>the JavaScript <mark>map()</mark> array method is generally the preferred method.</li>
+    </ul>
+
+    <h3>Keys</h3>
+    <ul>
+        <li>
+            Keys allow react to keep track of elements <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;this way, if an item is updated or removed <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;only that item will be re-rendered instead of the entire list.
+        </li>
+        <li>
+            Keys need to be unique to each sibling. <br>
+            &nbsp;&nbsp;&nbsp;&nbsp; but they can be duplicated globally
+        </li>
+        <li>
+            Generally, the key should be a unique ID assigned to each item. <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;As a last resort, you can use the array index as a key.
+        </li>
+
+    </ul>
 </body>
 </html>
