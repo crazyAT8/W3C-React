@@ -2,10 +2,38 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>React Forms</title>
 </head>
 <body>
+    <h1>React Forms</h1>
+    <p>just like in HTML, React uses forms to allow users to interact with the web page.</p>
+
+    <h3>Adding Forms in React</h3>
+    <ul>
+        <li>you add a form with React like any other element</li>
+        <li>
+            <code>
+                <br>
+                import React from 'react';                      <br>
+                import ReactDOM from 'react-dom/client';        <br>
+<br>
+                function MyForm() {                             <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;return (                                    <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;form&gt;                            <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label&gt;Enter your name:       <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="type" /&gt;     <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/label&gt;                           <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/form&gt;                           <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;)                                       <br>
+                }                                           <br>
+            </code>
+        </li>
+        <li>This will work as normal, the form will submit and the page will refresh.</li>
+        <li>But this is generally not what we want to happen in React.</li>
+        <li>We want to prevent this default behavior and let React control the form.</li>
+    </ul>
     
 </body>
 </html>
