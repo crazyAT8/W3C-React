@@ -35,5 +35,34 @@
         <li>We want to prevent this default behavior and let React control the form.</li>
     </ul>
     
+    <h3>Handling Forms</h3>
+    <ul>
+        <li>
+            Handling forms is about <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;how you handle the data when <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1) it changes value or <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2) gets submitted
+        </li>
+        <li>in HTML, form data is usually handled by the DOM</li>
+        <li>in React, form data is usually handled by the components</li>
+        <li>
+            when the data is handled by the components, <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;all the data is stored in the component state 
+        </li>
+        <li>you can control changes by adding event handlers in the <mark>onChange</mark> attribute</li>
+        <li>
+            We can use the <mark>useState</mark> Hook <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;to keep track of each inputs value <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;and provide a "single source of truth" for the entire application
+        </li>
+    </ul>
+
+    <h3>Submitting Forms</h3>
+    <ul>
+        <li>
+            You can control the submit action by <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;adding an event handler in the <mark>onSubmit</mark> attribute for the <mark>&lt;form&gt;</mark>
+        </li>
+    </ul>
 </body>
 </html>
